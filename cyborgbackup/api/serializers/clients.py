@@ -47,6 +47,14 @@ class ClientSerializer(BaseSerializer):
             obj.save()
         return obj
 
+    def create(self, validated_data):
+        force_ready = validated_data.pop('force_ready', False)
+        obj = super(ClientSerializer, self).create(**validated_data)
+        if force_ready:
+            obj.ready = True
+            obj.save()
+        return obj
+
 
 class ClientListSerializer(ClientSerializer):
     class Meta:
