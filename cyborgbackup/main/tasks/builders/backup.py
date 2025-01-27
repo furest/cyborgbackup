@@ -5,7 +5,7 @@ import tempfile
 
 from django.conf import settings
 
-from cyborgbackup.main.exceptions import JobCommandBuilderException
+from cyborgbackup.main.exceptions.JobBuilderException import JobCommandBuilderException
 from cyborgbackup.main.models.settings import Setting
 from cyborgbackup.main.tasks.builders.helpers import build_env
 from cyborgbackup.main.utils.common import load_module_provider
