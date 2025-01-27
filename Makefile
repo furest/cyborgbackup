@@ -106,7 +106,7 @@ initenv:
 	echo "MONGODB_HOST=mongodb" >> .env
 
 deb:
-	apt update && apt install -y build-essential debhelper
+	apt update && apt install -y build-essential debhelper git
 	make -f debian/rules binary
 	make -f debian/rules clean
 	cp /*.deb ./
