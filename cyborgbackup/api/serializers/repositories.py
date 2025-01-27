@@ -36,7 +36,7 @@ class RepositorySerializer(BaseSerializer):
 
     def create(self, validated_data):
         force_ready = validated_data.pop('force_ready', False)
-        obj = super(ClientSerializer, self).create(**validated_data)
+        obj = super(RepositorySerializer, self).create(validated_data)
         if force_ready:
             obj.ready = True
             obj.save()
