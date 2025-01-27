@@ -68,4 +68,10 @@ if ! check_postgresql; then
     exit 0
 fi
 
-systemctl start cyborgbackup
+systemctl enable --now cyborgbackup-callback-receiver.service
+systemctl enable --now cyborgbackup-celery-beat.service
+systemctl enable --now cyborgbackup-celery-worker-job.service
+systemctl enable --now cyborgbackup-celery-worker-main.service
+systemctl enable --now cyborgbackup-daphne.service
+systemctl enable --now cyborgbackup-uwsgi.service
+systemctl enable --now cyborgbackup-workers.service
