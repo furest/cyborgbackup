@@ -17,7 +17,8 @@ from packaging.version import parse, Version
 
 from cyborgbackup.main.expect import run
 # CyBorgBackup
-from cyborgbackup.main.models import Job, Repository
+from cyborgbackup.main.models import Repository
+from cyborgbackup.main.models.jobs import Job
 from cyborgbackup.main.models.settings import Setting
 from cyborgbackup.main.utils.common import get_ssh_version
 from cyborgbackup.main.utils.encryption import decrypt_field

@@ -9,7 +9,8 @@ from django.utils.translation import gettext_lazy as _
 from rest_framework import serializers
 
 from cyborgbackup.main.constants import ACTIVE_STATES, ANSI_SGR_PATTERN
-from cyborgbackup.main.models.jobs import Job, JobEvent
+from cyborgbackup.main.models.jobs import Job
+from cyborgbackup.main.models.events import JobEvent
 # CyBorgBackup
 from .base import BaseSerializer, DynamicFieldsSerializerMixin
 from ..fields import BinaryField

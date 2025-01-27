@@ -12,7 +12,8 @@ from django.core.management.base import BaseCommand
 from packaging.version import Version, parse
 
 from cyborgbackup.main.expect import run
-from cyborgbackup.main.models import Job, Repository
+from cyborgbackup.main.models import Repository
+from cyborgbackup.main.models.jobs import Job
 from cyborgbackup.main.models.settings import Setting
 from cyborgbackup.main.utils.common import get_ssh_version
 from cyborgbackup.main.utils.encryption import decrypt_field

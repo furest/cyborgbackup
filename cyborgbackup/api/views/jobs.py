@@ -21,7 +21,8 @@ from rest_framework.response import Response
 from rest_framework.settings import api_settings
 
 from cyborgbackup.main.constants import ACTIVE_STATES
-from cyborgbackup.main.models.jobs import Job, JobEvent
+from cyborgbackup.main.models.jobs import Job
+from cyborgbackup.main.models.events import JobEvent
 from cyborgbackup.main.utils.common import camelcase_to_underscore
 # CyBorgBackup
 from .generics import RetrieveUpdateDestroyAPIView, ListCreateAPIView, RetrieveAPIView, GenericAPIView, ListAPIView, \

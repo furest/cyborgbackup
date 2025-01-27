@@ -11,7 +11,8 @@ from django.dispatch import receiver
 
 from cyborgbackup.api.serializers.jobs import JobEventWebSocketSerializer
 # CyBorgBackup
-from cyborgbackup.main.models import User, JobEvent
+from cyborgbackup.main.models import User
+from cyborgbackup.main.models.events import JobEvent
 
 __all__ = []
 

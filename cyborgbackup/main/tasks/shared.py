@@ -14,7 +14,9 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.utils.timezone import now
 
 from cyborgbackup.main.consumers import emit_channel_notification
-from cyborgbackup.main.models import Job, Policy, User, JobEvent, Repository
+from cyborgbackup.main.models import Policy, User, Repository
+from cyborgbackup.main.models.jobs import Job
+from cyborgbackup.main.models.events import JobEvent
 from cyborgbackup.main.models.schedules import CyborgBackupScheduleState
 from cyborgbackup.main.models.settings import Setting
 from cyborgbackup.main.tasks.basetask import LogErrorsTask

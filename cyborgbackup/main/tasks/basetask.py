@@ -13,7 +13,7 @@ from django.conf import settings
 from django.core.cache import cache
 from django.db import transaction, DatabaseError
 
-from cyborgbackup.main.exceptions import JobException, JobHookException
+from cyborgbackup.main.exceptions.JobException import JobException, JobHookException
 from cyborgbackup.main.expect import run
 from cyborgbackup.main.models.settings import Setting
 from cyborgbackup.main.tasks.builders.helpers import build_passwords, build_cwd, build_env

@@ -8,8 +8,8 @@ from django.conf import settings
 from django.contrib.auth import get_user_model
 from rest_framework.authtoken.models import Token
 
-from cyborgbackup.main.exceptions import JobCatalogException
-from cyborgbackup.main.models import JobEvent
+from cyborgbackup.main.exceptions.JobException import JobCatalogException
+from cyborgbackup.main.models.events import JobEvent
 from cyborgbackup.main.models.settings import Setting
 from cyborgbackup.main.utils.encryption import decrypt_field
 

@@ -2,7 +2,7 @@ import pymongo
 from django.conf import settings
 from django.core.management.base import BaseCommand
 
-from cyborgbackup.main.models import Job
+from cyborgbackup.main.models.jobs import Job
 
 try:
     from elasticsearch import Elasticsearch

@@ -19,7 +19,7 @@ from .generics import ListAPIView, RetrieveAPIView, RetrieveUpdateDestroyAPIView
 from ..serializers.jobs import JobSerializer
 from ..serializers.policies import PolicySerializer, PolicyLaunchSerializer, PolicyModuleSerializer, \
     PolicyCalendarSerializer, PolicyVMModuleSerializer
-from ...main.modules import Querier
+from ...main.modules.queriers import Querier
 
 logger = logging.getLogger('cyborgbackups.api.views.policies')
 

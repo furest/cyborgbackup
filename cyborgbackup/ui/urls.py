@@ -10,7 +10,8 @@ from django.views.generic.base import TemplateView
 from prometheus_client import multiprocess
 
 from cyborgbackup import get_version
-from cyborgbackup.main.models import Job, Policy, Repository, Schedule, Client
+from cyborgbackup.main.models import Policy, Repository, Schedule, Client
+from cyborgbackup.main.models.jobs import Job
 from cyborgbackup.main.models.settings import Setting
 from cyborgbackup.main.utils.tasks import catalog_is_running, celery_worker_is_running
 

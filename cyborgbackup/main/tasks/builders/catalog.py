@@ -7,7 +7,7 @@ from django.conf import settings
 from django.contrib.auth import get_user_model
 
 from cyborgbackup.main.exceptions import JobCatalogException
-from cyborgbackup.main.models import JobEvent
+from cyborgbackup.main.models.events import JobEvent
 from cyborgbackup.main.tasks.builders.helpers import build_env
 
 logger = logging.getLogger('cyborgbackup.main.tasks.builders.catalog')

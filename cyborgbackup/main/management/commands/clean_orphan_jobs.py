@@ -3,7 +3,7 @@ from django.core.management.base import BaseCommand
 from django.db import transaction
 
 # CyBorgBackup
-from cyborgbackup.main.models import Job
+from cyborgbackup.main.models.jobs import Job
 
 
 class Command(BaseCommand):

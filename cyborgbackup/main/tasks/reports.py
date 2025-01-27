@@ -8,7 +8,8 @@ from email.message import EmailMessage
 from django.conf import settings
 from jinja2 import FileSystemLoader, Environment
 
-from cyborgbackup.main.models import Job, Catalog
+from cyborgbackup.main.models.catalogs import Catalog
+from cyborgbackup.main.models.jobs import Job
 from cyborgbackup.main.models.settings import Setting
 from cyborgbackup.main.tasks.helpers import humanbytes
 

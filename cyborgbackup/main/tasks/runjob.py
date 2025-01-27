@@ -5,7 +5,8 @@ import re
 from celery.app import app_or_default
 
 # CyBorgBackup
-from cyborgbackup.main.models import Job, JobEvent
+from cyborgbackup.main.models.jobs import Job
+from cyborgbackup.main.models.events import JobEvent
 from cyborgbackup.main.tasks.basetask import BaseTask
 from cyborgbackup.main.tasks.builders.backup import _build_args_for_backup
 from cyborgbackup.main.tasks.builders.catalog import _build_args_for_catalog

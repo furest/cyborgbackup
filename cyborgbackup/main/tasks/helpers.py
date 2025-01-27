@@ -3,7 +3,9 @@ import logging
 import os
 import shutil
 
-from cyborgbackup.main.models import User, Policy, Job, JobEvent
+from cyborgbackup.main.models import User, Policy
+from cyborgbackup.main.models.jobs import Job
+from cyborgbackup.main.models.events import JobEvent
 from cyborgbackup.main.models.settings import Setting
 
 logger = logging.getLogger('cyborgbackup.main.tasks.helpers')
