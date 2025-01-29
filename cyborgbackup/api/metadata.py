@@ -111,10 +111,11 @@ class Metadata(metadata.SimpleMetadata):
         for method in {'GET', 'PUT', 'POST'} & set(view.allowed_methods):
             view.request = clone_request(request, method)
             obj = self._check_permissions(view, method)
-            if obj is not None:
-                serializer = view.get_serializer(instance=obj)
-                actions[method] = self.get_serializer_info(serializer, method=method)
-                self._process_action_fields(actions, method, serializer, view)
+            if obj == False:
+                continue
+            serializer = view.get_serializer(instance=obj)
+            actions[method] = self.get_serializer_info(serializer, method=method)
+            self._process_action_fields(actions, method, serializer, view)
             view.request = request
         return actions
 
@@ -125,7 +126,7 @@ class Metadata(metadata.SimpleMetadata):
             if method == 'PUT' and hasattr(view, 'get_object'):
                 return view.get_object()
         except (exceptions.APIException, PermissionDenied, Http404):
-            return None
+            return False
         return None
 
     def _process_action_fields(self, actions, method, serializer, view):
